@@ -38,57 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate:CLLocationManagerDelegate{
-    
-
-    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        if beacons.count > 0 {
-            notify(beacons[0].proximity)
-        }
-    }
-    func notify(_ distance: CLProximity){
-        print("immediate")
-        switch distance {
-        case .immediate:
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if(region is CLBeaconRegion){
+            print("Enter region")
             let content = UNMutableNotificationContent()
-            content.title = "Forget Me Not"
-            content.body = "Are you forgetting something?"
+            content.title = "Enter region"
+            content.body = "Enter region"
             content.sound = .default
-              
-            let request = UNNotificationRequest(identifier: "IBeaconNotify", content: content, trigger: nil)
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-            return
-        default:
-            return
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("didExitRegion")
-      guard region is CLBeaconRegion else {
-        print("didExitRegion return")
-        return
-        }
-
-      let content = UNMutableNotificationContent()
-      content.title = "Forget Me Not"
-      content.body = "Are you forgetting something?"
-      content.sound = .default
-        
-      let request = UNNotificationRequest(identifier: "IBeaconNotify", content: content, trigger: nil)
-      UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-        print("didDetermineState")
-        if(state == CLRegionState.inside){
-            let content = UNMutableNotificationContent()
-            content.title = "IBeacon Notify"
-            content.body = "Thong bao Ibeacon"
-            content.sound = .defaultCritical
             
-            let request=UNNotificationRequest(identifier: "IBeaconNotify", content: content, trigger: nil)
-            UNUserNotificationCenter.current().add(request,withCompletionHandler: nil)
+            let request = UNNotificationRequest(identifier: region.identifier, content: content, trigger: nil)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
     }
+
 }
 

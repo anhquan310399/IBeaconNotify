@@ -134,12 +134,10 @@ extension ItemsViewController : UITableViewDataSource {
         
         if editingStyle == .delete {
             tableView.beginUpdates()
+            stopMonitoringItem(items[indexPath.row])
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
-            
-            stopMonitoringItem(items[indexPath.row])
-            
             persistItems()
         }
     }

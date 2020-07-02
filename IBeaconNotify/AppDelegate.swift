@@ -43,13 +43,13 @@ extension AppDelegate:CLLocationManagerDelegate{
             print("Enter region")
             let content = UNMutableNotificationContent()
             content.title = "Enter region"
-            content.body = "Enter region"
+            content.body = "Enter region \(region.identifier)"
             content.sound = .default
             
             let request = UNNotificationRequest(identifier: region.identifier, content: content, trigger: nil)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
     }
-
+    
 }
 

@@ -58,29 +58,27 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-Ps-KQE">
-                                                    <rect key="frame" x="122" y="62" width="67" height="23"/>
+                                                    <rect key="frame" x="115" y="56.5" width="67" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name ibeacon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSW-G4-Gyz">
-                                                    <rect key="frame" x="103" y="31" width="90" height="23"/>
+                                                    <rect key="frame" x="132.5" y="20" width="110" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Dg5-Ps-KQE" secondAttribute="bottom" constant="15" id="1B4-tF-csb"/>
-                                                <constraint firstItem="Dg5-Ps-KQE" firstAttribute="leading" secondItem="wzu-SF-Kik" secondAttribute="trailing" constant="27" id="1tC-gj-Vmj"/>
-                                                <constraint firstItem="aSW-G4-Gyz" firstAttribute="centerY" secondItem="trM-EF-GxS" secondAttribute="centerY" constant="-7.5" id="3ER-DH-04b"/>
-                                                <constraint firstAttribute="trailing" secondItem="aSW-G4-Gyz" secondAttribute="trailing" constant="182" id="3gx-NF-hIM"/>
+                                                <constraint firstItem="Dg5-Ps-KQE" firstAttribute="leading" secondItem="wzu-SF-Kik" secondAttribute="trailing" constant="20" id="1tC-gj-Vmj"/>
+                                                <constraint firstItem="aSW-G4-Gyz" firstAttribute="centerY" secondItem="trM-EF-GxS" secondAttribute="centerY" constant="-20" id="3ER-DH-04b"/>
                                                 <constraint firstItem="wzu-SF-Kik" firstAttribute="centerY" secondItem="trM-EF-GxS" secondAttribute="centerY" id="3tU-J2-9Ru"/>
-                                                <constraint firstAttribute="bottom" secondItem="aSW-G4-Gyz" secondAttribute="bottom" constant="46" id="5Xg-Os-3BZ" userLabel="bottom = Lbl Name.bottom + 71"/>
-                                                <constraint firstItem="Dg5-Ps-KQE" firstAttribute="top" secondItem="aSW-G4-Gyz" secondAttribute="bottom" constant="8" id="87D-Fl-SXC"/>
+                                                <constraint firstItem="Dg5-Ps-KQE" firstAttribute="top" secondItem="aSW-G4-Gyz" secondAttribute="bottom" constant="16" id="87D-Fl-SXC"/>
                                                 <constraint firstItem="aSW-G4-Gyz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wzu-SF-Kik" secondAttribute="trailing" constant="8" symbolic="YES" id="Afe-50-br0"/>
                                                 <constraint firstItem="wzu-SF-Kik" firstAttribute="leading" secondItem="trM-EF-GxS" secondAttribute="leading" constant="29" id="gi3-qw-s7s"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dg5-Ps-KQE" secondAttribute="trailing" constant="20" symbolic="YES" id="nnq-Pb-C1E"/>
+                                                <constraint firstItem="aSW-G4-Gyz" firstAttribute="centerX" secondItem="trM-EF-GxS" secondAttribute="centerX" id="y7r-p2-z6k"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
